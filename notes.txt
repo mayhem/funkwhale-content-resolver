@@ -1,0 +1,13 @@
+insert into playlists_playlisttrack (playlist_id, track_id, creation_date, index) values (4, 69, now(), 0);
+
+insert into playlists_playlist (name, user_id, privacy_level) values ("test 2", 1, "instance");
+
+
+SELECT mt.id
+     , mt.title
+     , ma.name
+  FROM music_track mt
+  JOIN music_artist ma
+    ON mt.artist_id = ma.id
+ LIMIT 10
+    ;
